@@ -1,26 +1,6 @@
 package lab2.task7;
 
-public class CalculatorRequest {
-    private Object leftOperand,rightOperand;
-    private String operation;
-    public CalculatorRequest(Object leftOperand,Object rightOperand,Object operation){
-        this.leftOperand=leftOperand;
-        this.rightOperand=rightOperand;
-        this.operation=operation.toString();
-    }
-
-    public Object getLeftOperand() {
-        return leftOperand;
-    }
-
-    public Object getRightOperand() {
-        return rightOperand;
-    }
-
-    public String getOperation() {
-        return operation;
-    }
-
+public record CalculatorRequest(Object leftOperand,Object rightOperand,String operation) {
     public String getRequestType(){
         Object l = leftOperand.getClass();
         Object r = rightOperand.getClass();

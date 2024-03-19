@@ -1,7 +1,7 @@
 package lab2.task7;
 import java.util.List;
 
-public class Main {
+public final class Main {
     public static void foo(String[] args) throws Exceptie {
         List<CalculatorResult> calculationResults =  SmarterCalculator.calculate(args);
         for (CalculatorResult result : calculationResults) {

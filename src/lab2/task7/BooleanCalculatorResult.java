@@ -10,8 +10,8 @@ public class BooleanCalculatorResult extends CalculatorResult{
     @Override
     public Boolean computeResult() throws Exceptie {
         CalculatorRequest cr = getRequest();
-        Object l = cr.getLeftOperand(),r=cr.getRightOperand();
-        String op = cr.getOperation();
+        Object l = cr.leftOperand(),r=cr.rightOperand();
+        String op = cr.operation();
         if(op.equals("&"))
             return (Boolean) l && (Boolean) r;
         else if(op.equals("|"))
